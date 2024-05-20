@@ -1,0 +1,90 @@
+.forms-main-div {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms-main-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/books-2596809_1920.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomInOut 0.5s ease-in-out;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input date{
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-button .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.forgot-pass {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.forgot-pass a {
+    color: #007bff;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+.form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-pass {
+    display: flex;
+    justify-content: end;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
