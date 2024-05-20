@@ -240,6 +240,28 @@ const ParentDashboard = () => {
           </div>
         </div>
       </div>
+      <div className={`content ${selectedSection === 'support' ? 'fade-in' : 'fade-out'}`} id="support" style={{ display: selectedSection === 'support' ? 'block' : 'none' }}>
+        <h2 className="text-center text-white m-4">Queries</h2>
+        <div className='container'>
+          <div className='row'>
+            <div className=''>
+              <div className="support-section">
+                <form className='support-form'>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label text-white">Name</label>
+                    <input type="text" className="form-control" placeholder='Enter Your Name' id="name" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="queryMessage" className="form-label text-white">Enter your message</label>
+                    <textarea className="form-control" id="queryMessage" placeholder='Type here' rows="5" required></textarea>
+                  </div>
+                  <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
